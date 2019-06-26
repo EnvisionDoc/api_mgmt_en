@@ -1,51 +1,34 @@
 ***********************
-EnOS™ Offline Analytics
+EnOS™ API Management
 ***********************
 
 .. toctree::
-    :maxdepth: 1
-    :caption: Overview
+   :maxdepth: 1
+   :caption:  Overview
 
-    datalake_analytics_overview
-
-.. toctree::
-    :maxdepth: 1
-    :caption: Learn
-
-    data_source/datasource_overview
-    data_integration/di_overview
-    data_ide/dataide_overview
-    task_monitor/taskmonitor_overview
-
+   api_management_overview
 
 .. toctree::
    :maxdepth: 1
-   :caption: Getting started
+   :caption:  Learn
 
-   gettingstarted
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Tutorial
-
-   tutorial/index
+   api_management_concepts
+   api_management_workflow
+.. api_management_flow_control
+.. api_management_security
 
 .. toctree::
    :maxdepth: 1
    :caption: How-to's
 
-   data_source/index
-   data_integration/index
-   data_ide/index
-   task_monitor/index
-   metadata_management/index
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Reference
-
-   common_library
-   system_variables
-
+   creating_api
+   deploying_api
+   testing_api
+   deleting_api
+.. publishing_api
+   
    
 
+
+
+  
