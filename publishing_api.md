@@ -1,28 +1,26 @@
-# Publishing API
+# Releasing APIs
 
-Note: This article is in the progress of translation. Thanks for your visit!
+After being tested and qualified, APIs can be released to API consumers through API agents.
 
-API测试通过之后，就可以通过API代理发布给API消费者使用。
+## Task description
 
-## 任务描述
+This article describes how to release APIs to API consumers through API agents.
 
-本文介绍了通过API代理，将API发布给API消费者以供调用的步骤。
+## Prerequisites
 
-## 开始前准备
+- You own an EnOS account and the permissions required to release APIs. See [Access Control] (api_management_access_control).
+- You have understood the [concepts] related to API management (api_management_concepts).
+- You have deployed and tested an API and it has been qualified.
 
-- 拥有一个EnOS账号，并拥有发布API操作需要的相应权限，参考[访问控制](api_management_access_control)。
-- 了解API管理相关[概念](api_management_concepts)。
-- 已经部署了一个API并测试通过。
+## Steps
+1. Select **API Management > API Agent**;
+2. Change the **Deployment Status** of the API agent to be released as **Online**, and the API agent will be released to the production environment;
+3. Change the **Visibility** of the API agent to be released as **Exposed**, and the API agent will be visible and available to API consumers once requested.
 
-## 步骤
-1. 选择 **API管理 > API代理**；
-2. 将需要发布的API代理的 **部署** 修改为 **在线**，API代理即被发布到生产环境；
-3. 将需要发布的API代理的 **可见性** 修改为 **公共**，API代理即可被API消费者发现并申请使用。
+## Results
 
-## 结果
+The API is  released and exposed, and API consumers can discover and request to use it.
 
-API被公开发布，API消费者可以发现并申请使用该API。
+## Subsequent tasks
 
-## 后续任务
-
-[删除API](deleting_api)
+[Deleting APIs] (deleting_api)

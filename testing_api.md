@@ -1,27 +1,25 @@
-# Testing API
+# Testing APIs
 
-Note: This article is in the progress of translation. Thanks for your visit!
+For the released APIs, users can user the testing function in the API Management page to test them so that they can be used or exposed.
 
-对于已经上线的API，用户可以使用API管理的测试功能，对API进行测试后再使用或公开。
+## Task description
 
-## 任务描述
-
-本文介绍如何通过API管理的测试功能来测试API代理。
+This article describes how to test API agents by using the testing function of API Management.
 
 
-## 开始前准备
+## Prerequisites
 
-- 拥有一个EnOS账号，并拥有定义API操作需要的相应权限，参考[策略，角色，与权限](/docs/iam/zh_CN/latest/access_policy)。
-- 了解API管理相关[概念](api_management_concepts)。
-- 已经完成了[新建API](creating_api)并上线了一个API。
+- You own an EnOS account and the permissions required to define APIs. See [Policies, Roles and Permissions](/docs/iam/zh_CN/latest/access_policy).
+- You have understood the [concepts] related to API management (api_management_concepts).
+- You have completed the task [Creating APIs] (creating_api) and released an API.
 
-## 步骤
+## Steps
 
-1. 选择**API管理 > 我的API**，点击需要测试的API所在API组；
+1. Select **API Management > My APIs**, and then click the API group where the API to be tested is located;
 
-2. 找到已**上线**但尚未**公开**的API，点击操作栏的**测试API**，进行测试；
+2. Find the API that has been **Released** but not **Exposed**, and click **Testing APIs** to test it;
 
-## 结果
+## Results
 
-用户可根据测试结果，对API做调试、开始使用、或公开。
+Users may debug, use or expose the API, depending on the testing results.
 

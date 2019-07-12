@@ -1,98 +1,95 @@
-# Creating API
+# Creating APIs
 
-Note: This article is in the progress of translation. Thanks for your visit!
+To release your APIs onto EnOS and make them callable for authorized consumers, you should define your own APIs in the API Management page at first.
 
-为了将自己的API发布在EnOS上，以供授权的使用者调用，用户需要首先在API管理种定义自己的API。
+## Task description
 
-## 任务描述
+This article describes how to create an API in the API Management page.
 
-本文介绍了如何在API管理中创建API。
+## Prerequisites
 
-## 开始前准备
+- You own an EnOS account and the permissions required to define APIs. See [Policies, Roles and Permissions](/docs/iam/zh_CN/latest/access_policy).
+- You have understood the [concepts] related to API management (api_management_concepts).
 
-- 拥有一个EnOS账号，并拥有定义API操作需要的相应权限，参考[策略，角色，与权限](/docs/iam/zh_CN/latest/access_policy)。
-- 了解API管理相关[概念](api_management_concepts)。
+## Creating API groups
 
-## 新建API组
+1. Select **API Management > My APIs**;
 
-1. 选择 **API管理 > 我的API**；
-
-2. 点击**新建API组**，填入以下字段：
+2. Click **Create an API Group**, and complete the following fields:
    
-   - 分组名称：支持英文大小写、数字、连字符(-)，不超过32个字符；
-   - 分组路径
-   - 分组描述：不超过140个字符
+   - Group name: uppercase/lowercase English letters, numbers, hyphen (-) are supported and its length is limited within 32 characters;
+   - Group path
+   - Group description: limited within 140 characters.
 
-3. 点击**保存**，完成API组的创建；
+3. Click **Save** to complete the creation;
 
-   .. image:: media/creating_api_group.png
-
-## 新建API
-
-1. 点击已创建的API组，在API组详情页，点击**添加API**；
    
-2. 在API基本信息页，填入下列字段后点击**下一步**：
-   - API名称
-   - API类型：支持私有或三方类型。
-   - API描述
+## Creating an API
 
-3. 在API后端服务页，填入下列字段后点击**下一步**：
-   - 后端服务地址：即实际提供该API服务的HTTP地址及端口号
-   - HTTP Method：目前EnOS支持GET、POST、PUT、DELETE四种method
-   - 后端请求路径：即提供该API服务的资源所在路径
-   - 入参请求模式：API网关对入参的处理模式，支持透传和映射
-      - 映射：即 API 网关在接收到API使用者的 API 请求时，通过映射关系将请求转换成后端需要的格式。
-      - 透传：API 网关在接收到 API 请求后，不对请求进行处理，直接转发到后端服务。
-   - 后端超时时间：指 API 请求到达 API 网关后，API 网关调用 API 后端服务的响应时间，即由 API 网关请求后端服务开始直至 API 网关收到后端返回结果的时长。单位为毫秒。如果响应时间超过该值，API 网关会放弃请求后端服务，并给用户返回相应的错误信息。
-   - 后端参数：即调用后端服务所需要的参数。包含以下字段：
-      - 参数名
-      - 参数位置：参数在请求中的位置，可选Head、Query和Path
-      - 数据类型：字段的类型，支持String、Int、Long、Float、Double、Boolean、Binary、Date、DateTime、Password。
-      - 是否必选
-      - 默认值
-      - 描述
-   - 常量参数：对API使用者不可见，但是 API 网关会在中转请求时，将这些参数加入到请求中的指定位置，再传递至后端服务，实现后端的业务需求。包含以下字段：
-      - 参数名
-      - 参数位置：常量参数在请求中的位置，支持Head和Query
-      - 默认值
-      - 描述
-      - 操作
+1. Click the API group you created and then click **Add an API** in the page of API group details;
+   
+2. In the page of API basic information, complete the following fields and click **Next**:
+   - API name
+   - API type: private and third-party APIs supported.
+   - API description
 
-4. 在API请求页，填写下列字段后点击**下一步**：
-   - API版本：用以标识API的不同版本，同一个API的不同版本可以挂载在同一个API组下面。 
-   - 请求路径：API使用者为调用该API所使用的路径。如果入参请求模式为映射，请求路径可以根据需要由API开发者进行设定；如果入参请求模式为透传，请求路径需与后端请求路径保持一致。
-   - API参数定义：当入参请求模式为映射时，需要设定API请求的参数定义。入参透传模式下，不需要定义参数。API参数定义包含下列字段：
-      - 参数名：展示给API使用者的参数名称
-      - 后端参数名：参数所映射的后端参数
-      - 参数位置：参数在请求中的位置
-      - 后端参数位置：对应的后端参数在API网关转发来的请求中的位置
-      - 数据类型：字段的类型
-      - 后端数据类型：对应的后端数据类型
-      - 是否必填
-      - 默认值
-      - 描述
+3. In the API backend service page, complete the following fields and click **Next**:
+   - Backend service address: HTTP address and port that actually provide the API service
+   - HTTP Method: GET, POST, PUT and DELETE supported on EnOS currently
+   - Backend Request Path: the path where the resource provide the API service is located
+   - Incoming parameter request mode: processing mode of API gateway for incoming parameters, where passthrough and mapping are supported
+      - Mapping: when the API gateway receives the API request from an API consumer, it converts the request into a format required by the backend through a mapping relationship.
+      - Passthrough: After receiving the API request, the API gateway forwards it directly to the backend service rather than processing it.
+   - Backend timeout time: After the API request arrives at the API gateway, the API gateway invokes the response time of the API backend service, which is the length of time for which the API gateway requests the backend service until the API gateway receives the result returned by the backend. The timeout time is calculated in ms. If the response time exceeds this value, the API gateway will stop requesting the backend service and return an appropriate error message to the user.
+   - Backend parameters: the parameters that are required to invoke backend services. Including the following fields:
+      - Parameter name
+      - Parameter location: the location of the parameter in the request, which may be Head, Query or Path
+      - Data type: the type of field, for which String, Int, Long, Float, Double, Boolean, Binary, Date, DateTime and Password are supported.
+      - Necessary or not
+      - Default
+      - Description
+   - Constant parameters: these parameters are not visible to API consumers, however the API gateway will add these parameters to the specified location in the request when transferring the request, and then pass it to the backend service to meet the backend business needs. Including the following fields:
+      - Parameter name
+      - Parameter location: the location of the constant parameter in the request, which may be Head or Query
+      - Default
+      - Description
+      - Operations
 
-   上述字段中，参数名、是否必选、默认值、描述由用户自己设定，其他字段根据会自动匹配API后端服务页上后端参数的响应字段。
+4. In the API request page, complete the following fields and click **Next**:
+   - API version: used to identify different versions of the API. Different versions of the same API can be mounted under the same API group. 
+   - Request path: the path used by the API consumer to invoke the API. If mapping is selected as the incoming parameter request mode, the request path may be set by the API developer as needed; if passthrough is selected as the incoming parameter request mode, the request path needs to be consistent with the backend request path.
+   - API parameter definition: when mapping is selected as the incoming parameter request mode, you need to set the parameter definition of the API request. In the passthrough mode, there is no need to define parameters. The API parameter definition contains the following fields:
+      - Parameter name: the name of the parameter to be displayed to the API consumer
+      - Backend parameter name: the backend parameter to which the parameter is mapped
+      - Parameter location: the location of the parameter in the request
+      - Backend parameter location: The location of the corresponding backend parameter in the request forwarded by the API gateway
+      - Date type: the type of field
+      - Backend data type: corresponding backend data type
+      - Necessary or not
+      - Default
+      - Description
 
-5. 在返回结果页，填写下列字段后点击**下一步**：
+   Among the above fields, some fields, including "Parameter name," "Necessary or not", "Default" and "Description", can be set by the user, while other fields are automatically matched with corresponding fields of the backend parameters in the API backend service page.
+
+5. In the page of returned results, complete the following fields and click **Next**:
    - Content Type
-   - 成功结果示例
-   - 失败结果示例：可选字段。
-   - 响应参数定义
-   - 错误码定义
+   - Successful result samples
+   - Failed result samples: optional
+   - Response parameter definition
+   - Error code definition
 
-6. 在插件配置页，用户可以为将要发布在EnOS的API增加额外配置，当前EnOS支持下列功能：
-   - 流控
-   - 请求大小限制
-   - IP限制
-   - Mock测试
+6. In the plugin configuration page, the user can add additional configurations for the API to be released in EnOS. The EnOS currently supports the following functions:
+   - Traffic control
+   - Request size limitations
+   - IP limitations
+   - Mock testing
 
-   点击**完成**
+   Click **Complete**
 
-## 结果
+## Results
 
-在API组详情页，可以看到创建成功的API，当前该API的状态为**下线**，是否公开为**私有**。
+In the page of API group details, you can see the API that has been created successfully, and its status is shown as **Offline** with the attribute of "Exposed or not" shown as **Private**.
 
-## 后续操作
+## Subsequent operations
 
-[部署API](deploying_api)
+[Deploying APIs](deploying_api)

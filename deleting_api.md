@@ -1,27 +1,25 @@
-# Deleting API
+# Deleting APIs
 
-Note: This article is in the progress of translation. Thanks for your visit!
+Users may delete the APIs that do not need to be exposed on EnOS. Deleting an API does not affect the backend services of the API agent.
 
-对于不再需要发布在EnOS的API，用户可以选择将其删除。删除API并不会影响该API代理的后台服务。
+## Task description
 
-## 任务描述
+This article describes how to delete an API through API Management.
 
-本文描述了通过API管理进行删除API的操作。
+## Prerequisites
 
-## 开始前准备
+- You own an EnOS account and the permissions required to define APIs. See [Policies, Roles and Permissions](/docs/iam/zh_CN/latest/access_policy).
+- You have understood the [concepts] related to API managemnt (api_management_concepts).
+- You have complete the task [Creating APIs] (creating_api).
 
-- 拥有一个EnOS账号，并拥有定义API操作需要的相应权限，参考[策略，角色，与权限](/docs/iam/zh_CN/latest/access_policy)。
-- 了解API管理相关[概念](api_management_concepts)。
-- 已经完成了[新建API](creating_api)。
+## Steps
 
-## 步骤
+1. Select **API Management > My APIs**, and then click the API group where the API to be deleted is located;
 
-1. 选择 **API管理 > 我的API**，点击需要删除的API所在的API组；
+2. In the API list, check and make sure that the API to be deleted is **Offline**;
 
-2. 在API列表中，首先确保需要删除的API状态为**下线**；
+3. Click **Delete API**.
 
-3. 点击**删除API**
+## Results
 
-## 结果
-
-相应的API被删除，API使用者无法调用后台服务。对后台服务无影响。
+The corresponding API is deleted and the API consumers can not invoke the backend services. There are no impact on backend services.

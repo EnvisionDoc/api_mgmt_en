@@ -1,35 +1,33 @@
-# Deploying API
+# Deploying APIs
 
-Note: This article is in the progress of translation. Thanks for your visit!
+The private APIs that have been created can be usable within the OU only after being released on EnOS, while the third-party APIs that have been created can be invoked by a third party only after being released and exposed on EnOS.
 
-已创建的私有API需要在EnOS上上线，才能在本OU内部使用；对于已创建的第三方API，需要在EnOS上线，并公开，才能被第三方调用。
+## Task description
 
-## 任务描述
+This article describes how to deploy APIs.
 
-本文介绍了部署API的步骤。
+## Prerequisites
+- You own an EnOS account and the permissions required to define APIs. See [Policies, Roles and Permissions](/docs/iam/zh_CN/latest/access_policy).
+- You have understood the [concepts] related to API management (api_management_concepts).
+- You have complete the task [Creating APIs] (creating_api).
 
-## 开始前准备
-- 拥有一个EnOS账号，并拥有定义API操作需要的相应权限，参考[策略，角色，与权限](/docs/iam/zh_CN/latest/access_policy)。
-- 了解API管理相关[概念](api_management_concepts)。
-- 已经完成了[新建API](creating_api)。
+## Steps
 
-## 步骤
+1. Select **API Management > My APIs**, and then click the API group where the API to be deployed is located to enter the page of API group details;
 
-1. 选择 **API管理 > 我的API**， 点击需要部署的API所在的API组，进入API组详情页；
+2. In the API list:
+   - Select the private API to be released, and switch its status from **Offline** to **Released**;
+   - For the third-party API to be released, switch its status from **Offline** to **Released**, and you can test the API to be exposed. For more information about testing, see [Testing APIs] (testing_api)
 
-2. 在API列表中：
-   - 选择需要上线的私有API，将其状态从**下线**切换为**发布**；
-   - 对于需要发布的第三方API，首先应将其状态从**下线**切换为**发布**，此时可以对即将公开的第三方API进行测试。有关测试的更多信息，参见[测试API](testing_api)
+3. For the third-party API released and tested, switch its status of **Exposed or not** from **Private** to **Exposed** to complete its deployment.
 
-3. 对已测试完毕的已发布第三方API，将其**是否公开**状态由**私有**切换为**公开**，完成API的部署。
+## Results
 
-## 结果
+The private APIs with a status of **Released** can be used in the OU.
 
-状态为**发布**的私有API，已经可以在本OU内使用。
+The third-party APIs with a status of **Exposed** can be found by selecting **API Management > Exposed APIs**. Click **Export Documents**, and you can check the API documents in .txt format.
 
-状态为**公开**的第三方API，可以在**API管理 > 公开API**处找到，点击**文档导出**，可以查看.txt格式的API文档。
+## Subsequent operations
 
-## 后续操作
-
-对于不需要再使用的API，用户可以选择[删除API](deleting_api)。
+The user can select [Deleting APIs](deleting_api) to delete any APIs that do not need to be used any more.
 
