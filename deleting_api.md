@@ -6,7 +6,7 @@ Users can delete the APIs that no longer need to be published on EnOS. Deleting 
 
 This article describes how to delete an API through API Management.
 
-## Before You Start
+## Prerequisites
 
 - You own an EnOS account and the permissions to define APIs. See [Policies, Roles and Permissions](/docs/iam/en/latest/access_policy).
 - You have understood the concepts related to [API Management](api_management_concepts).

@@ -8,7 +8,7 @@ For the **Online** APIs, users can test them in the API Management before exposi
 This article describes how to test API agents by using the testing function of API Management.
 
 
-## Before You Start
+## Prerequisites
 
 - You own an EnOS account and the permissions to define APIs. See [Policies, Roles and Permissions](/docs/iam/en/latest/access_policy).
 - You have understood the concepts related to [API Management](api_management_concepts).

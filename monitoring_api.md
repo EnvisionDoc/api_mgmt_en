@@ -16,7 +16,7 @@ Click the **Health** button of the API to view the number and success rate of in
 
 You can view the daily success rate of invoking, the  number of successful and failed invoking, and total number of invoking on the left of **API Health**.
 
-![](media\dailyrate.png)
+![](media/dailyrate.png)
 
 
 
@@ -24,14 +24,14 @@ You can view the daily success rate of invoking, the  number of successful and f
 
 You can view the number of successful invoking, the number of failed invoking, and the success rate of each hour from the chart of **Daily Success Rate Details** in **API Health**.
 
-![](media\daydetails.png)
+![](media/daydetails.png)
 
 
 ### Viewing the History Invoking Data
 
 You can select a date from the drop-down list and view the invoking information of that date.
 
-![](media\selectday.png)
+![](media/selectday.png)
 
 
 <!--end-->
