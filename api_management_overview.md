@@ -1,34 +1,36 @@
 # API Management
+EnOS API Management (APIM) publishes all the APIs that meet the standards supported by EnOS to API consumers. You can use API Management to configure specific policies, and control and process API parameters. The API Management covers full lifecycle management such as API design, testing, management and publishing, and manages security, traffic control, logging, billing, monitoring, and report of managed APIs.
+
+The API Management decouples the production and consumption of APIs. When the backend API changes, the frontend application can continue to access the API without modifying application code or configurations.
 
 EnOS API Management (APIM) helps organizations publish APIs to external, partner, and internal developers to unlock the potential of their data and services. You can use API management to configure specific policies, controling and managing API-specific parameters. It covers the lifecycle of an API, from design to testing, managment, and publishing. It also manages the security, flow control, logging, billing, monitoring and reporting of an API.
 
 The API Management decouples the production and consumption of APIs. Changes to the backend APIs do not affect the frontend application's continued access to the APIs. There is no need to change the code or configurations of the front-end applications.
 
-## Related roles
-
+## Related Roles
 API Management serves mainly for the following roles:
 
 - API developers
 
-  Design, develop, test and publish APIs.
+  Who write API documents, design, develop, test and publish APIs. 
 
 - API consumers
 
-  Enterprises or individuals that use APIs to build applications.
+  Who are enterprise or individual developers that build applications with APIs.
 
 ## Main Functions
 
-- Defining APIs
+## Main Functions
+  
+- [Creating APIs](creating_api): create the APIs that meet OpenAPI 3.0.
 
-  API developers create or import the APIs that meet OpenAPI 3.0 and test them.
+- [Deploying APIs](deploying_api): deploy the APIs for internal or external use.
 
-- Deploying APIs
+- [Backing up APIs](exporting_api): export the existed APIs, and transfer them to another EnOS environment.
 
-  API developers create or import API agents, test API agents, create agent policies and deploy API developed by themselves through API agents.
+- [Testing APIs](testing_api): test the APIs before publishing.
 
-- API document query
-
-  API consumers query, select and request to use released and exposed APIs.
+- [Monitoring API](monitoring_api): view the invoking number and status of APIs.
 
 ## Related Services
 
