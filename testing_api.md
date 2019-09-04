@@ -11,7 +11,6 @@ This article describes how to test API agents by using the testing function of A
 ## Prerequisites
 
 - You own an EnOS account and the permissions to define APIs. See [Policies, Roles and Permissions](/docs/iam/en/latest/access_policy).
-- You have understood the concepts related to [API Management](api_management_concepts).
 - You have completed the task [Creating APIs](creating_api) and published an API.
 
 ## Procedure
